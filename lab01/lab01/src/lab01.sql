@@ -85,14 +85,7 @@ CREATE TABLE IF NOT EXISTS Character_sound(
     FOREIGN KEY(character_id) REFERENCES Character(character_id) ON DELETE CASCADE ,
     FOREIGN KEY(sound_id) REFERENCES Sound(sound_id) ON DELETE CASCADE
 );
--- CREATE TABLE IF NOT EXISTS Q(
---     id serial primary key,
---     age INTEGER ,
---     attr2 integer ,
---     UNIQUE(age, attr2)
--- );
---
--- INSERT Into Q(age, attr2) VALUES (null, null);
+
 INSERT INTO Interaction (interaction_name, subject, description, duration) VALUES
     ('Throw', 'Ball' , 'Throwing the ball to another character', '00:00:05'),
     ('Kick', 'Ball', 'Kicking the ball ', '00:00:05'),
